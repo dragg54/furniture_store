@@ -1,4 +1,6 @@
 import React from "react"
+import { useContext } from "react";
+import { ItemContext } from "../../../pages/Home/Home";
 import {
   ButtonStroke,
   DescriptionContainer,
@@ -13,7 +15,8 @@ import {
   UniqueButton,
 } from "./StyledNowOnSale";
 
-const NowOnSale = ({ items }) => {
+const NowOnSale = () => {
+  const items = useContext(ItemContext)
   console.log(items);
   return (
     <NowOnSaleContainer>

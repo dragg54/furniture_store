@@ -23,11 +23,15 @@ export const NowOnSaleContainer = styled.div`
 export const NowOnSaleSection = styled.div`
   width: 85%;
   height: 85%;
-  overflow-x: scroll;
 
   @media (max-width: 1200px) {
     width: 94%;
     height: 85%;
+    overflow-x: scroll;
+  }
+
+  @media(max-width: 1080px){
+    overflow-x: scroll;
   }
 
   @media (max-width: 780px) {
@@ -62,7 +66,7 @@ export const Heading = styled.h3`
 export const UniqueButton = styled.div`
   width: 30px;
   height: 30px;
-  border: 1px dotted #0f1111;
+  border:${props=>props.secondary?"1px dotted #e5e5e5":"1px dotted #0f1111"} ;
   border-radius: 50%;
   position: relative;
 `;
@@ -70,7 +74,7 @@ export const UniqueButton = styled.div`
 export const ButtonStroke = styled.div`
   width: 30px;
   height: 1px;
-  background-color: #0f1111;
+  background-color: ${props=>props.secondary?" #e5e5e5": "#0f1111"};
   position: absolute;
   left: 100%;
   top: 50%;
@@ -84,7 +88,7 @@ export const NowOnSaleItemsContainer = styled.div`
   align-items: center;
 
   @media (max-width: 1200px) {
-    width: 150%;
+    width: 120%;
   }
 
   @media (max-width: 780px) {
@@ -116,7 +120,6 @@ export const ItemCard = styled.div`
 export const ImageContainer = styled.div`
   height: 76%;
   width: 100%;
-  background-color: yellow;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -36,8 +36,13 @@ export const HomeFirstSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color:#e5e5e5;
+    background-color: #0F1111;
+    color:#e5e5e5;
     flex-direction: column;
+
+    @media(max-width: 900px){
+        padding: 30px 20px
+    }
 
     @media(max-width: 780px){
         width: 100%;

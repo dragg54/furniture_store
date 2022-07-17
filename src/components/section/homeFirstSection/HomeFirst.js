@@ -11,10 +11,10 @@ const HomeFirst = () => {
   return (
     <HomeFirstContainer>
       <ImageContainer>
-        <Img src="../../../images/kam.jpg" />
+        <Img src="../../../../images/kam.jpg" />
       </ImageContainer>
       <HomeFirstSection>
-        <h1 style={{marginRight:"4px", whiteSpace:"nowrap", marginBottom:"7px"}}>HOME COMES FIRST</h1>
+        <h1 style={{marginRight:"4px", whiteSpace:"nowrap", marginBottom:"7px", color:"#ffc304"}}>HOME COMES FIRST</h1>
         <p>
           We believe in creating and finding things that travel with you and are
           meant to be enjoyed for a lifetime - from home to home, from
@@ -26,9 +26,9 @@ const HomeFirst = () => {
           home.
         </p>
         <div style={{display:"flex", marginTop:"11px"}}>
-          <p style={{marginRight:"5px", fontWeight:"bold"}}>Read More About us</p>
-          <UniqueButton>
-            <ButtonStroke />
+          <p style={{marginRight:"10px", fontWeight:"bold"}}>Read More About us</p>
+          <UniqueButton secondary>
+            <ButtonStroke secondary/>
           </UniqueButton>
         </div>
       </HomeFirstSection>
