@@ -4,6 +4,8 @@ export const LimitedEditionContainer = styled.div`
   height: 1100px;
   width: 100%;
   background-color: #e5e5e5;
+  position: relative;
+
 
   @media (max-width: 1200px) {
     height: 1100px;
@@ -18,7 +20,7 @@ export const LimitedEditionContainer = styled.div`
   }
 
   @media(max-width: 600px){
-    height: 1700px
+    height: 1950px
   }
 `;
 
@@ -29,7 +31,9 @@ export const LimitedEditionImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   object-fit: contain;
-  margin-top: 20px;
+  background-color: #ffc304;
+  flex-direction: column;
+  padding-top: 10px;
 
   @media (max-width: 780px) {
     height: 23%;
@@ -37,6 +41,8 @@ export const LimitedEditionImageContainer = styled.div`
 
   @media (max-width: 600px) {
     height: 17%;
+    justify-content: space-between;
+    padding: 50px 0
   }
 `;
 
@@ -93,7 +99,28 @@ export const LimitedEditionItemsSection = styled.div`
 export const Img = styled.img`
   width: 100%;
   height: 100%;
+
 `;
+
+export const ItemImg = styled.img`
+  width: 45%;
+  height: 80%;
+  margin-top: -130px;
+ 
+  @media(max-width: 900px){
+   width: 50%;
+  }
+
+  @media(max-width: 780px){
+   width: 55%
+  }
+
+  @media(max-width: 600px){
+   width: 63%;
+   height: 70%;
+   margin-top: -70px;
+  }
+`
 
 export const LimitedEditionItemSectionsContainer = styled.div`
   width: 100%;
@@ -111,3 +138,76 @@ export const LimitedEditionItemSectionsContainer = styled.div`
     overflow: hidden;
   }
 `;
+
+export const DiscountPriceContainer = styled.div`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #FF0000;
+  right: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px gray;
+
+  @media(max-width: 900px){
+    width: 100px;
+    height: 100px;
+    right:22%;
+    top: 20%;
+    z-index: 10;
+  }
+
+  @media(max-width: 780px){
+    top:7%;
+    right: 20%
+  }
+
+  @media(max-width: 600px){
+    width: 60px;
+    height: 60px;
+    top: 5%;
+    right: 16%
+  }
+`
+
+export const DiscountPrice = styled.p`
+  font-size: 1.3rem;
+  font-weight: bold;
+  color:  #e5e5e5;
+
+  @media(max-width: 900px){
+    font-size: 1rem;
+  }
+
+  @media(max-width: 600px){
+    font-size: 0.7rem
+  }
+`
+
+export const SpecialItemHeading = styled.h3`
+  font-size: 2.6rem;
+  color:#0F1111;
+  text-align: center;
+  font-family: ubuntu;
+
+  @media(max-width: 600px){
+   font-size: 1.5rem;
+  }
+`
+
+export const SpecialItemButton = styled.button`
+  padding: 12px 30px;
+  background-color: #FF0000;
+  color: #e5e5e5;
+  border: none;
+  box-shadow: 1px 1px 1px gray;
+  border-radius: 6px;
+
+  @media(max-width: 600px){
+  padding: 10px 25px;
+  font-size: 0.7rem
+
+  }
+`
