@@ -16,7 +16,7 @@ export const NowOnSaleContainer = styled.div`
 
   @media (max-width: 600px) {
     justify-content: space-between;
-    height: 1500px;
+    height: 1800px;
   }
 `;
 
@@ -112,8 +112,8 @@ export const ItemCard = styled.div`
   }
 
   @media (max-width: 600px) {
-    width: 90%;
-    height: 300px;
+    width: 85%;
+    height: 370px;
   }
 `;
 
