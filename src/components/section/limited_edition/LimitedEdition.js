@@ -11,12 +11,17 @@ import {
   UniqueButton,
 } from "../nowOnSale/StyledNowOnSale";
 import {
+  DiscountPrice,
+  DiscountPriceContainer,
   Img,
+  ItemImg,
   LimitedEditionContainer,
   LimitedEditionImageContainer,
   LimitedEditionItemsContainer,
   LimitedEditionItemSectionsContainer,
   LimitedEditionItemsSection,
+  SpecialItemButton,
+  SpecialItemHeading,
 } from "./StyledLimitedEdition";
 
 const LimitedEdition = () => {
@@ -25,7 +30,12 @@ const LimitedEdition = () => {
     <>
       <LimitedEditionContainer>
         <LimitedEditionImageContainer>
-          <Img src="../../../../images/don.jpg" />
+        <SpecialItemHeading>LEATHER SOFA BY <span style={{color:"#FF0000", fontFamily:"Edu VIC WA NT Beginner", textDecoration:""}}>Wilson Matty</span></SpecialItemHeading>
+          <ItemImg src="../../../../images/don.png" />
+          <DiscountPriceContainer>
+            <DiscountPrice>-50% OFF</DiscountPrice>
+          </DiscountPriceContainer>
+          <SpecialItemButton>VIEW PRODUCT</SpecialItemButton>
         </LimitedEditionImageContainer>
         <LimitedEditionItemsContainer>
             <HeadingContainer>
