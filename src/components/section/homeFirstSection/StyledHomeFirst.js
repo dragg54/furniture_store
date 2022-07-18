@@ -27,6 +27,12 @@ export const ImageContainer = styled.div`
         width: 100%;
         height: 46%
     }
+
+    
+    @media(max-width: 780px){
+        width: 100%;
+        height: 45%
+    }
 `
 
 export const HomeFirstSection = styled.div`
@@ -48,6 +54,10 @@ export const HomeFirstSection = styled.div`
         width: 100%;
         height: 52%;
         padding: 50px 30px;
+    }
+
+    @media(max-width: 600px){
+        height: 55%
     }
     `
 

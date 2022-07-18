@@ -18,7 +18,7 @@ export const LimitedEditionContainer = styled.div`
   }
 
   @media(max-width: 600px){
-    height: 1900px
+    height: 1700px
   }
 `;
 
@@ -36,7 +36,7 @@ export const LimitedEditionImageContainer = styled.div`
   }
 
   @media (max-width: 600px) {
-    height: 15%;
+    height: 17%;
   }
 `;
 
@@ -58,8 +58,8 @@ export const LimitedEditionItemsContainer = styled.div`
   }
 
   @media(max-width: 600px){
-    height:85%;
-    margin-top: 10px
+    height:83%;
+    margin-top: 25px
   }
 `;
 
