@@ -16,7 +16,7 @@ const NewsLetter = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-start",
-            height: "50px",
+            marginTop:"15px"
           }}
         >
           <Input type="text" placeholder="Your email" />
@@ -25,11 +25,11 @@ const NewsLetter = () => {
             value="Subscribe"
             style={{
               fontSize: "0.7rem",
-              padding: "0px 3px",
+              width: "80px",
               borderRadius: "4px",
               border: "none",
-              height: "34px",
-              backgroundColor:" #ffc304"
+              backgroundColor:" #ffc304",
+              height:"30px"
             }}
           />
         </div>
