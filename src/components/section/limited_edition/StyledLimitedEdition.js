@@ -20,7 +20,7 @@ export const LimitedEditionContainer = styled.div`
   }
 
   @media(max-width: 600px){
-    height: 1750px
+    height: 1900px
   }
 `;
 
