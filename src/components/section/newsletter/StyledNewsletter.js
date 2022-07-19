@@ -11,6 +11,11 @@ export const NewsletterContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media(max-width: 900px){
+        height: 350px;
+        background-size: 26%;
+    }
+
     @media(max-width: 600px){
         height: 300px;
         background-size: 24%;
@@ -27,8 +32,8 @@ export const NewsLetterContentContainer = styled.div`
     margin-left: 300px;
     color: #0f1111;
 
-    @media(max-width: 780px){
-        margin-left: 150px
+    @media(max-width: 900px){
+        margin-left: 20px
     }
 
     @media(max-width: 600px){
@@ -46,6 +51,8 @@ export const Input = styled.input`
     background-color: #fff;
     margin-right: 10px;
     border: none;
+    outline: none;
+    height: 30px;
 
     @media(max-width: 600px){
        width:200px;
