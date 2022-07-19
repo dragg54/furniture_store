@@ -12,15 +12,15 @@ export const LimitedEditionContainer = styled.div`
   }
 
   @media (max-width: 900px) {
-    height: 800px;
+    height: 1100px;
   }
 
   @media (max-width: 780px) {
-    height: 2200px;
+    height: 2900px;
   }
 
   @media(max-width: 600px){
-    height: 1950px
+    height: 1750px
   }
 `;
 
@@ -57,6 +57,10 @@ export const LimitedEditionItemsContainer = styled.div`
 
   @media (max-width: 1200px) {
     margin-top: 35px;
+  }
+
+  @media(max-width: 900px){
+    height: 37%;
   }
 
   @media (max-width: 780px) {
@@ -150,6 +154,7 @@ export const DiscountPriceContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 1px gray;
+  top: 19%;
 
   @media(max-width: 900px){
     width: 100px;
@@ -198,16 +203,18 @@ export const SpecialItemHeading = styled.h3`
 `
 
 export const SpecialItemButton = styled.button`
-  padding: 12px 30px;
+  padding: 15px 30px;
   background-color: #FF0000;
   color: #e5e5e5;
   border: none;
   box-shadow: 1px 1px 1px gray;
   border-radius: 6px;
+  border: 1px solid  #FF0000;
+  font-size: 0.7rem;
 
   @media(max-width: 600px){
   padding: 10px 25px;
-  font-size: 0.7rem
+ 
 
   }
 `

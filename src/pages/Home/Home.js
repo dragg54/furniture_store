@@ -6,6 +6,7 @@ import useFetchAPI from "../../API/fetchAPI";
 import NowOnSale from "../../components/section/nowOnSale/NowOnSale";
 import HomeFirst from "../../components/section/homeFirstSection/HomeFirst";
 import LimitedEdition from "../../components/section/limited_edition/LimitedEdition";
+import NewsLetter from "../../components/section/newsletter/NewsLetter";
 
 export const ItemContext = createContext();
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <NowOnSale />
         <HomeFirst />
         <LimitedEdition />
+        <NewsLetter/>
       </ItemContext.Provider>
     </>
   );
