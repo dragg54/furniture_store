@@ -9,6 +9,15 @@ export const FooterContainer = styled.div`
     align-items: center;
     color: #e5e5e5;
     line-height: 32px;
+
+    @media(max-width: 900px){
+        height: 500px;
+    }
+
+
+    @media(max-width: 600px){
+        height: 800px;
+    }
 `
 
 export const FooterContentContainer = styled.div`
@@ -16,6 +25,16 @@ export const FooterContentContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media(max-width: 900px){
+        width: 80%
+    }
+
+    @media(max-width: 600px){
+        flex-direction: column;
+        justify-content:space-evenly;
+        height: 100%;
+    }
 `
 export const HelpContainer = styled.div`
     
