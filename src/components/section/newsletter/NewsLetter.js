@@ -20,9 +20,8 @@ const NewsLetter = () => {
           }}
         >
           <Input type="text" placeholder="Your email" />
-          <input
+          <button
             type="submit"
-            value="Subscribe"
             style={{
               fontSize: "0.7rem",
               width: "80px",
@@ -31,7 +30,7 @@ const NewsLetter = () => {
               backgroundColor:" #ffc304",
               height:"30px"
             }}
-          />
+          >Subscribe</button>
         </div>
       </NewsLetterContentContainer>
     </NewsletterContainer>
