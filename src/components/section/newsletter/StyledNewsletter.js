@@ -46,7 +46,7 @@ export const NewsLetterContentContainer = styled.div`
 export const Input = styled.input`
     font-size: 0.7rem;
     padding: 14px 3px;
-    width: 300px;
+    width: 250px;
     border-radius: 4px;
     background-color: #fff;
     margin-right: 10px;
@@ -55,6 +55,6 @@ export const Input = styled.input`
     height: 30px;
 
     @media(max-width: 600px){
-       width:200px;
+       width:150px;
     }
 `
