@@ -43,7 +43,7 @@ const ItemSection = ({ item }) => {
           <p style={{fontSize:"0.8rem", opacity:"0.8"}}>
             <BsClock style={{color:"green"}}/> 60 Day Low Price Guarantee
           </p>
-          <h1>${item.price * 10}</h1>
+          <h1>${(item.price * 10).toFixed(2)}</h1>
           <AddToCartButton>
             <FaShoppingCart /> ADD TO CART
           </AddToCartButton>

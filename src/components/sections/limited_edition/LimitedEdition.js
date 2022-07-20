@@ -23,6 +23,7 @@ import {
   SpecialItemButton,
   SpecialItemHeading,
 } from "./StyledLimitedEdition";
+import { Link } from "react-router-dom"
 
 const LimitedEdition = () => {
   const items = useContext(ItemContext);
@@ -60,6 +61,7 @@ const LimitedEdition = () => {
             <LimitedEditionItemsSection>
             {items.splice(0, 4).map((item) => {
                 return (
+                  <Link to={"items?id=" + item._id}>
                     <ItemCard key={item._id + Math.random()}>
                 <ImageContainer>
                   <Img
@@ -84,6 +86,7 @@ const LimitedEdition = () => {
                     ${(item.price * 10).toFixed(2)}
                   </p>
                 </DescriptionContainer>
+                </Link>
               </ItemCard>
             );
         })}
