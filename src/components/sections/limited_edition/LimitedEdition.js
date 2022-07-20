@@ -23,7 +23,7 @@ import {
   SpecialItemButton,
   SpecialItemHeading,
 } from "./StyledLimitedEdition";
-import { Link } from "react";
+import { Link } from "react-router-dom";
 
 const LimitedEdition = () => {
   const items = useContext(ItemContext);
