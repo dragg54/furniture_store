@@ -1,6 +1,6 @@
 import React from "react"
 import { useContext } from "react";
-import { ItemContext } from "../../../pages/Home/Home";
+import { ItemContext } from "../../../pages/Home";
 import {
   ButtonStroke,
   DescriptionContainer,
@@ -14,6 +14,7 @@ import {
   NowOnSaleSection,
   UniqueButton,
 } from "./StyledNowOnSale";
+import { Link } from "react-router-dom"
 
 const NowOnSale = () => {
   const items = useContext(ItemContext)
@@ -42,8 +43,8 @@ const NowOnSale = () => {
         <NowOnSaleItemsContainer>
           {items.splice(0, 4).map((item) => {
             return (
-              <ItemCard key={item._id + Math.random()}>
-                <ImageContainer>
+                  <Link to={"items?id=" + item._id}><ItemCard key={item._id}>
+              <ImageContainer>
                   <Img
                     src={
                       "https://furniturestore54.herokuapp.com/" + item.itemImage
@@ -67,6 +68,7 @@ const NowOnSale = () => {
                   </p>
                 </DescriptionContainer>
               </ItemCard>
+              </Link>
             );
           })}
         </NowOnSaleItemsContainer>

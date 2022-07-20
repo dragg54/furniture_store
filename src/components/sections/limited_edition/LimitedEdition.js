@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { ItemContext } from "../../../pages/Home/Home";
+import { ItemContext } from "../../../pages/Home";
 import {
   ButtonStroke,
   DescriptionContainer,
