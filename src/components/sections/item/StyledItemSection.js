@@ -85,6 +85,10 @@ export const AddToCartButton = styled.button`
     @media(max-width: 900px){
         width: 300px;
     }
+    
+    @media(max-width: 600px){
+        width: 100%;
+    }
 `
 
 export const Img = styled.img`
