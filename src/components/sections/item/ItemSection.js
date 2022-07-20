@@ -33,7 +33,7 @@ const ItemSection = ({ item }) => {
           </div>
           <DiscountContainer>
             <div style={{width: "100%", height:"100%", border:"1px solid yellow", color:"#e5e5e5", display:"flex", flexDirection:"column", justifyContent:"center", padding:"10px"}}>
-              <h5 style={{}}>ON ALL FUNRINURES AND MATTRESSES</h5>
+              <h5 style={{}}>ON ALL FURNINURES AND MATTRESSES</h5>
               <p style={{fontSize:"0.8rem"}}>Discount is automatically applied in cart. Limited time only</p>
             </div>
           </DiscountContainer>
