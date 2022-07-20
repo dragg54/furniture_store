@@ -26,6 +26,11 @@ export const FooterContentContainer = styled.div`
   align-items: center;
   height: 100%;
 
+  
+  @media(max-width: 900px){
+        height: 80%;
+    }
+
   @media (max-width: 600px) {
     flex-direction: column;
     justify-content: space-evenly;
@@ -56,12 +61,16 @@ export const FooterContent = styled.div`
 
   @media (max-width: 900px) {
     width: 80%;
+    height: 70%;
   }
 
-  @media (max-width: 900px) {
-    height: 95%;
+  @media (max-width: 780px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  @media(max-width: 600px){
+    height: 95%
   }
 `;
