@@ -107,7 +107,7 @@ export const ItemCard = styled.div`
   }
 
   @media (max-width: 780px) {
-    width: 90%;
+    width: 100%;
     height: 520px;
   }
 

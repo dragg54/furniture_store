@@ -50,8 +50,8 @@ const NowOnSale = () => {
         <NowOnSaleItemsContainer>
           {items.splice(0, 4).map((item) => {
             return (
-              <Link to={"items?id=" + item._id}>
-                <ItemCard key={item._id + Math.random()}>
+              <ItemCard key={item._id}>
+                  <Link to={"items?id=" + item._id}>
                   <ImageContainer>
                     <Img
                       src={
@@ -76,9 +76,8 @@ const NowOnSale = () => {
                       ${(item.price * 10).toFixed(2)}
                     </p>
                   </DescriptionContainer>
-                </ItemCard>
-                <ItemCard></ItemCard>
               </Link>
+                </ItemCard>
             );
           })}
         </NowOnSaleItemsContainer>
