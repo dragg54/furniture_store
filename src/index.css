@@ -16,3 +16,15 @@ body{
   overflow-x: hidden;
   background-color: #e5e5e5;
 }
+
+td{
+  text-align: left;
+  padding: 15px;
+  opacity: 0.8;
+}
+
+th{
+  text-align: left;
+  padding: 15px;
+  opacity: 0.8;
+}
