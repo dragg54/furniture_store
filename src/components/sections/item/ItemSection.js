@@ -10,7 +10,14 @@ import {
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FaShoppingCart} from "react-icons/fa";
 import { BsTruck, BsClock } from "react-icons/bs";
-const ItemSection = ({ item }) => {
+import { ADD_TO_CART } from "../../../context/CartReducer";
+
+const ItemSection = ({context}) => {
+  const item = context.item
+  const dispatch = context.dispatch
+   const handleCartItems =(item) =>{
+    dispatch({type:ADD_TO_CART, payload:{items: item}})
+   }
   return (
     <>
       <ItemSectionContainer>
@@ -44,7 +51,7 @@ const ItemSection = ({ item }) => {
             <BsClock style={{color:"green"}}/> 60 Day Low Price Guarantee
           </p>
           <h1>${(item.price * 10).toFixed(2)}</h1>
-          <AddToCartButton>
+          <AddToCartButton onClick={()=>handleCartItems(item)}>
             <FaShoppingCart /> ADD TO CART
           </AddToCartButton>
         </ItemContentContainer>
