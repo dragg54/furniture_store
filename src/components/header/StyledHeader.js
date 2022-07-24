@@ -40,7 +40,7 @@ export const CompanyName = styled.h6`
   font-size: 0.6rem;
   margin-top: -30px;
   font-family: Indie Flower;
-  color:  #ffc304;;
+  color:  #ffc304;
 `;
 
 export const Img = styled.img`
@@ -54,8 +54,24 @@ export const SearchAndCartContainer = styled.div`
   justify-content: space-around;
   color: #fff;
   opacity: 0.7;
+  font-size: 1.5rem;
 
   @media (max-width: 600px) {
     width: 100px;
   }
 `;
+
+export const CartItemQuantity = styled.p`
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background-color: #ffc304;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30%;
+  right: -50%
+`
