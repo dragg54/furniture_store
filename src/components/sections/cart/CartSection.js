@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import {
   CartContainer,
@@ -6,7 +6,12 @@ import {
   CouponApplyButton,
   CouponContainer,
   CouponInput,
+  Divider,
   ImageContainer,
+  Img,
+  ItemContainer,
+  ItemDetailsContainer,
+  Li,
   Price,
   QuantityControlButton,
   TotalPriceContainer,
@@ -15,7 +20,38 @@ import {
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 const CartSection = ({ cartItems }) => {
-  console.log(cartItems);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const[ itemQuantity, setItemQuantity ] = useState(1)
+
+
+  const itemPrice = cartItems.map((cartItem, index) => {
+    return cartItem.price * itemQuantity;
+  });
+
+  useEffect(() => {
+    if (itemPrice.length !== 0) {
+      const totalPrice = itemPrice.reduce(
+        (initialPrice, nextPrice) => initialPrice + nextPrice
+      );
+      setTotalPrice(totalPrice);
+    }
+  }, [totalPrice, itemPrice]);
+
+  const handleIncrement= () =>{
+    setItemQuantity(itemQuantity + 1)
+  }
+
+  const handleDecrement = () =>{
+    if(itemQuantity > 0 ){
+      setItemQuantity(itemQuantity - 1)
+    }
+  }
+
+  const deleteItem = (item) =>{
+    cartItems.filter(cartItem=>{
+      return cartItem.id  !== cartItem
+    })
+  }
   return (
     <CartContainer>
       <CartTable>
@@ -27,7 +63,7 @@ const CartSection = ({ cartItems }) => {
             <th>Total Price</th>
             <td></td>
           </tr>
-            <tr>
+          <tr>
             <td colSpan={6}>
               <div
                 style={{
@@ -39,39 +75,42 @@ const CartSection = ({ cartItems }) => {
               ></div>
             </td>
           </tr>
-          {cartItems.map(cartItem=>{
-            return(
-              <tr key={cartItem.id}>
-            <td style={{ textAlign: "right" }}>
-              <ImageContainer />
-            </td>
-            <td>
-              <Price>${(cartItem.price * 10).toFixed(2)}</Price>
-            </td>
-            <td>
-              <QuantityControlButton>
-                <FiMinus /> 1 <FiPlus />
-              </QuantityControlButton>
-            </td>
-            <td>$1400</td>
-            <td>
-              <AiFillDelete />
-            </td>
-          </tr>
-            )
-
-          })}
+          {cartItems.map((cartItem) => {
+           return(
+              <tr key={cartItem._id}>
+                <td style={{ textALign: "right" }}>
+                  <ItemContainer>
+                    <ImageContainer>
+                      <Img
+                        src={
+                          "https://furniturestore54.herokuapp.com/" +
+                          cartItem.itemImage
+                        }
+                      />
+                    </ImageContainer>
+                    <ItemDetailsContainer>
+                      <p style={{ opacity: "0.7" }}>{cartItem.name}</p>
+                    </ItemDetailsContainer>
+                  </ItemContainer>
+                </td>
+                <td>
+                  <Price>${(cartItem.price * itemQuantity * 10).toFixed(2)}</Price>
+                </td>
+                <td>
+                  <QuantityControlButton>
+                    <FiMinus onClick={handleDecrement}/> {itemQuantity} <FiPlus  onClick={handleIncrement}/>
+                  </QuantityControlButton>
+                </td>
+                <td>$1400</td>
+                <td>
+                  <AiFillDelete onClick={(()=>deleteItem(cartItem))}/>
+                </td>
+              </tr>
+            
+          )})}
         </tbody>
       </CartTable>
-      <div
-        style={{
-          width: "80%",
-          height: "2px",
-          backgroundColor: "#171515",
-          marginBottom: "10px",
-          opacity: "0.45",
-        }}
-      ></div>
+      <Divider></Divider>
       <TotalPriceWrapper>
         <CouponContainer>
           <CouponInput type="text" placeholder="Coupon code" />
@@ -87,8 +126,8 @@ const CartSection = ({ cartItems }) => {
               justifyContent: "space-between",
             }}
           >
-            <li>SubTotal:</li>
-            <li style={{ opacity: "1" }}>$12333</li>
+            <Li>SubTotal:</Li>
+            <Li style={{ opacity: "1" }}>${(totalPrice * 10).toFixed(2)}</Li>
           </div>
           <div
             style={{
@@ -97,8 +136,8 @@ const CartSection = ({ cartItems }) => {
               justifyContent: "space-between",
             }}
           >
-            <li>Shipping:</li>
-            <li style={{ opacity: "1" }}>Free</li>
+            <Li>Shipping:</Li>
+            <Li style={{ opacity: "1" }}>Free</Li>
           </div>
           <div
             style={{ width: "90%", color: "#171515", opacity: "0.45" }}
@@ -110,8 +149,8 @@ const CartSection = ({ cartItems }) => {
               justifyContent: "space-between",
             }}
           >
-            <li>Total Price:</li>
-            <li style={{ opacity: "1" }}>$12344</li>
+            <Li>Total Price:</Li>
+            <Li style={{ opacity: "1" }}>${(totalPrice * 10).toFixed(2)}</Li>
           </div>
         </TotalPriceContainer>
       </TotalPriceWrapper>
