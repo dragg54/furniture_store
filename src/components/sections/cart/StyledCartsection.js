@@ -10,14 +10,71 @@ export const CartContainer = styled.div`
 
 export const CartTable = styled.table`
   width: 80%;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media (max-width: 780px) {
+    width: 95%;
+  }
 `;
 
 export const Price = styled.p``;
 
 export const ImageContainer = styled.div`
-  height: 200px;
-  width: 350px;
+  height: 100%;
+  width: 60%;
   background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+
+  @media(max-width: 480px){
+   width: 100%;
+   height: 50%
+  }
+`;
+
+export const ItemContainer = styled.div`
+  height: 200px;
+  width: 400px;
+  display: flex;
+
+  @media (max-width: 780px) {
+    width: 300px;
+
+  }
+
+  @media(max-width: 600px){
+    width: 200px;
+    height: 150px;
+  }
+
+  @media(max-width: 480px){
+    width: 50px;
+    height: 50px;
+    flex-direction: column;
+    height: 140px;
+    align-items: flex-start;
+  }
+`;
+
+export const ItemDetailsContainer = styled.div`
+  height: 100%;
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media(max-width: 480px){
+   width: 100%;
+   height: 35%;
+   justify-content: flex-start;
+   padding: 10px 0;
+  }
 `;
 
 export const QuantityControlButton = styled.button`
@@ -34,12 +91,26 @@ export const TotalPriceWrapper = styled.div`
   display: flex;
   height: 130px;
   align-items: center;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media(max-width: 480px){
+   height: 100px;
+   width: 95%
+  }
 `;
 
 export const CouponContainer = styled.div`
   width: 34%;
   display: flex;
   justify-content: space-between;
+
+  
+  @media (max-width: 780px) {
+    width: 45%;
+  }
 `;
 
 export const TotalPriceContainer = styled.div`
@@ -48,7 +119,11 @@ export const TotalPriceContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  `
+
+  @media(max-width: 480px){
+   width: 40%
+  }
+`;
 
 export const CouponApplyButton = styled.button`
   padding: 10px 19px 10px 19px;
@@ -61,12 +136,55 @@ export const CouponApplyButton = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  `
+
+  @media (max-width: 780px) {
+    height: 30px;
+    font-size: 0.6rem;
+    width: 150px;
+    padding: 5px
+  }
+`;
 
 export const CouponInput = styled.input`
-width:230px;
+  width: 230px;
   padding: 10px 19px 10px 19px;
   height: 40px;
-  font: 0.7rem;
+  font-size: 0.7rem;
   border: none;
+  margin-right: 8px;
+
+  @media (max-width: 780px) {
+    height: 30px;
+    width: 170px;
+    padding: 5px
+  }
+
+  @media(max-width: 480px){
+   width: 130px;
+   height: 25px;
+  }
 `;
+
+export const Img = styled.img`
+  height: 100%;
+  width: 100%;
+`;
+
+export const Divider = styled.div`
+  width: 80%;
+  height: 2px;
+  background-color: #171515;
+  margin-bottom: 10px;
+  opacity: 0.45;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+`;
+
+export const Li = styled.li`
+  @media (max-width: 780px) {
+    font-size: 0.8rem;
+  }
+`;
+
