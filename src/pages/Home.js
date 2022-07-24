@@ -7,21 +7,26 @@ import NowOnSale from "../components/sections/nowOnSale/NowOnSale";
 import HomeFirst from "../components/sections/homeFirstSection/HomeFirst";
 import LimitedEdition from "../components/sections/limited_edition/LimitedEdition";
 import NewsLetter from "../components/sections/newsletter/NewsLetter";
+import Loading from "../loading/Loading";
 
 export const ItemContext = createContext();
 const Home = () => {
   const [data] = useFetchAPI(BASE_URL);
-  return (
-    <>
-      <ItemContext.Provider value={data}>
+    if(data.length !== 0){
+      return(
+        <ItemContext.Provider value={data}>
         <Hero />
         <NowOnSale />
         <HomeFirst />
         <LimitedEdition />
         <NewsLetter/>
-      </ItemContext.Provider>
-    </>
-  );
+      </ItemContext.Provider> 
+      )
+    }
+
+    else{
+      return  <Loading/>
+    }
 };
 
 export default Home;
