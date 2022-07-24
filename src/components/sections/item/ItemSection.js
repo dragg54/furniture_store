@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AddToCartButton,
   DiscountContainer,
@@ -11,13 +11,19 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FaShoppingCart} from "react-icons/fa";
 import { BsTruck, BsClock } from "react-icons/bs";
 import { ADD_TO_CART } from "../../../context/CartReducer";
-
+import { Link } from "react-router-dom"
 const ItemSection = ({context}) => {
+  const[buttonToggle, setButtonToggle] = useState(true)
+
   const item = context.item
   const dispatch = context.dispatch
    const handleCartItems =(item) =>{
-    dispatch({type:ADD_TO_CART, payload:{items: item}})
+    if(buttonToggle){
+      dispatch({type:ADD_TO_CART, payload:{items: item}})
+      setButtonToggle(false)
    }
+    }
+    
   return (
     <>
       <ItemSectionContainer>
@@ -52,7 +58,7 @@ const ItemSection = ({context}) => {
           </p>
           <h1>${(item.price * 10).toFixed(2)}</h1>
           <AddToCartButton onClick={()=>handleCartItems(item)}>
-            <FaShoppingCart /> ADD TO CART
+            <Link to={!buttonToggle? "/cart":""} style={{color:"#000"}}><FaShoppingCart/> {buttonToggle?"ADD TO CART":"PROCEED TO CART"}</Link>
           </AddToCartButton>
         </ItemContentContainer>
       </ItemSectionContainer>

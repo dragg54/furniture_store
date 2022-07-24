@@ -3,6 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap');
 
+
+@media (max-width: 780px) {
+  td,th{
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  td,th{
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
