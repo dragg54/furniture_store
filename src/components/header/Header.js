@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  CartItemQuantity,
   CompanyName,
   Img,
   Logo,
@@ -10,7 +11,7 @@ import {
 import { FiSearch, FiShoppingCart, FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({item}) => {
   return (
     <NavContainer>
       <Link to="/">
@@ -28,8 +29,11 @@ const Header = () => {
         <FiSearch />
         <FiHeart />
         <Link to="/cart" style={{color: "inherit"}}>
-          <li>
+          <li style={{position:"relative"}}>
             <FiShoppingCart />
+            <CartItemQuantity>
+              {item.length}
+            </CartItemQuantity>
           </li>
         </Link>
       </SearchAndCartContainer>
