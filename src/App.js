@@ -10,8 +10,8 @@ function App() {
         <Layout>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/:id" element={<Item />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path=":id" element={<Item />} />
         </Routes>
     </Layout>
       </Router>
