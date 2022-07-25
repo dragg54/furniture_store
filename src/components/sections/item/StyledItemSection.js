@@ -5,6 +5,7 @@ export const ItemSectionContainer = styled.div `
     height: 600px;
     display: flex;
     background-color:  #f4f4f4;
+    margin-bottom: 50px;
 
     
     @media(max-width: 780px){
