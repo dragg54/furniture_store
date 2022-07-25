@@ -18,6 +18,10 @@ export const CartTable = styled.table`
   @media (max-width: 780px) {
     width: 95%;
   }
+
+  @media(max-width: 480px){
+    width:100%
+  }
 `;
 
 export const Price = styled.p``;
@@ -54,7 +58,6 @@ export const ItemContainer = styled.div`
 
   @media(max-width: 480px){
     width: 50px;
-    height: 50px;
     flex-direction: column;
     height: 140px;
     align-items: flex-start;
@@ -83,6 +86,8 @@ export const QuantityControlButton = styled.button`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 4px;
+  border: solid 1px gray;
 `;
 
 export const TotalPriceWrapper = styled.div`
@@ -110,6 +115,10 @@ export const CouponContainer = styled.div`
   
   @media (max-width: 780px) {
     width: 45%;
+  }
+
+  @media(max-width: 480px){
+    width:50%
   }
 `;
 
@@ -143,6 +152,11 @@ export const CouponApplyButton = styled.button`
     width: 150px;
     padding: 5px
   }
+
+  @media(max-width: 480px){
+    width:120px;
+    height: 25px;
+  }
 `;
 
 export const CouponInput = styled.input`
@@ -160,7 +174,7 @@ export const CouponInput = styled.input`
   }
 
   @media(max-width: 480px){
-   width: 130px;
+   width: 110px;
    height: 25px;
   }
 `;
