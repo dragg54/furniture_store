@@ -156,6 +156,7 @@ export const CouponApplyButton = styled.button`
   @media(max-width: 480px){
     width:120px;
     height: 25px;
+    font-size: 0.4rem
   }
 `;
 
