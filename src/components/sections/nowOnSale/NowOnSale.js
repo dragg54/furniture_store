@@ -51,7 +51,7 @@ const NowOnSale = () => {
           {items.splice(0, 4).map((item) => {
             return (
               <ItemCard key={item._id}>
-                  <Link to={"items?id=" + item._id}>
+                  <Link to={"items?id=" + item._id} style= {{color: "inherit"}}>
                   <ImageContainer>
                     <Img
                       src={
