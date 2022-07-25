@@ -10,7 +10,7 @@ const Layout = ({children}) => {
     <>
       <Header item={item}/>
        {children}
-      <Footer/>
+       <Footer/>   
     </>
   );
 };
