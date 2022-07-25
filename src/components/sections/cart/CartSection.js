@@ -27,20 +27,29 @@ const CartSection = ({ cartItems }) => {
     })
   );
 
-    const itemPrice = cartItems.map((cartItem, index)=>{
-      for(let quantity of itemQuantity){
-        return cartItem.price * quantity.quantity
-      }
-    })
-
   useEffect(() => {
+    function findTotalPrice() {
+      let itemPrice = []
+      for (let cartItem of cartItems) {
+        for (let quantity of itemQuantity) {
+          if(cartItem._id === quantity.id){
+
+            itemPrice.push(cartItem.price * quantity.quantity);
+          }
+        }
+      }
+      return itemPrice
+    }
+    const itemPrice = findTotalPrice()
     if (itemPrice.length !== 0) {
       const totalPrice = itemPrice.reduce(
         (initialPrice, nextPrice) => initialPrice + nextPrice
       );
       setTotalPrice(totalPrice);
     }
-  }, [totalPrice, itemPrice]);
+  }, [totalPrice, cartItems, itemQuantity]);
+
+  console.log(totalPrice)
 
   const handleIncrement = (id) => {
     for (let item of itemQuantity) {
@@ -60,7 +69,7 @@ const CartSection = ({ cartItems }) => {
     }
   };
 
-  const deleteItem = ''
+  const deleteItem = "";
 
   return (
     <CartContainer>
@@ -86,53 +95,54 @@ const CartSection = ({ cartItems }) => {
             </td>
           </tr>
           {cartItems.map((cartItem) => {
-            return(
-            itemQuantity.map((item=>{
-            return (
-              <>
-              {cartItem._id === item.id? 
-              <tr key={cartItem._id}>
-                <td style={{ textALign: "right" }}>
-                  <ItemContainer>
-                    <ImageContainer>
-                      <Img
-                        src={
-                          "https://furniturestore54.herokuapp.com/" +
-                          cartItem.itemImage
-                        }
-                        />
-                    </ImageContainer>
-                    <ItemDetailsContainer>
-                      <p style={{ opacity: "0.7" }}>{cartItem.name}</p>
-                    </ItemDetailsContainer>
-                  </ItemContainer>
-                </td>
-                <td>
-                  <Price>
-        
-                      {
-                      (cartItem.price * 10).toFixed(2)
-                    }
-                  </Price>
-                </td>
-                <td>
-                  <QuantityControlButton>
-                    <FiMinus onClick={() => handleDecrement(cartItem._id)} />
-                
-                      {item.quantity}
-                    <FiPlus onClick={() => handleIncrement(cartItem._id)} />
-                  </QuantityControlButton>
-                </td>
-                <td>{(cartItem.price * item.quantity * 10).toFixed(2)}</td>
-                <td>
-                  <AiFillDelete onClick={() => deleteItem(cartItem)} />
-                </td>
-              </tr>:""}
-              </>
-            )
-                  
-        
-          })))
+            return itemQuantity.map((item) => {
+              return (
+                <>
+                  {cartItem._id === item.id ? (
+                    <tr key={cartItem._id}>
+                      <td style={{ textALign: "right" }}>
+                        <ItemContainer>
+                          <ImageContainer>
+                            <Img
+                              src={
+                                "https://furniturestore54.herokuapp.com/" +
+                                cartItem.itemImage
+                              }
+                            />
+                          </ImageContainer>
+                          <ItemDetailsContainer>
+                            <p style={{ opacity: "0.7" }}>{cartItem.name}</p>
+                          </ItemDetailsContainer>
+                        </ItemContainer>
+                      </td>
+                      <td>
+                        <Price>{(cartItem.price * 10).toFixed(2)}</Price>
+                      </td>
+                      <td>
+                        <QuantityControlButton>
+                          <FiMinus
+                            onClick={() => handleDecrement(cartItem._id)}
+                          />
+
+                          {item.quantity}
+                          <FiPlus
+                            onClick={() => handleIncrement(cartItem._id)}
+                          />
+                        </QuantityControlButton>
+                      </td>
+                      <td>
+                        {(cartItem.price *item.quantity * 10).toFixed(2)}
+                      </td>
+                      <td>
+                        <AiFillDelete onClick={() => deleteItem(cartItem)} />
+                      </td>
+                    </tr>
+                  ) : (
+                    ""
+                  )}
+                </>
+              );
+            });
           })}
         </tbody>
       </CartTable>
@@ -176,7 +186,7 @@ const CartSection = ({ cartItems }) => {
             }}
           >
             <Li>Total Price:</Li>
-            <Li style={{ opacity: "1" }}>${(totalPrice * 10).toFixed(2)}</Li>
+            <Li style={{ opacity: "1" }}>${(totalPrice* 10).toFixed(2)}</Li>
           </div>
         </TotalPriceContainer>
       </TotalPriceWrapper>
