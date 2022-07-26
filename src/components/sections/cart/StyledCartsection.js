@@ -77,6 +77,7 @@ export const ItemDetailsContainer = styled.div`
    height: 35%;
    justify-content: flex-start;
    padding: 10px 0;
+   font-size: 0.6rem
   }
 `;
 
@@ -156,7 +157,7 @@ export const CouponApplyButton = styled.button`
   @media(max-width: 480px){
     width:120px;
     height: 25px;
-    font-size: 0.4rem
+    font-size: 0.2rem
   }
 `;
 
