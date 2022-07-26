@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AddToCartButton,
   DiscountContainer,
@@ -12,9 +12,9 @@ import { FaShoppingCart} from "react-icons/fa";
 import { BsTruck, BsClock } from "react-icons/bs";
 import { ADD_TO_CART } from "../../../context/CartReducer";
 import { Link } from "react-router-dom"
+
 const ItemSection = ({context}) => {
   const[buttonToggle, setButtonToggle] = useState(true)
-
   const item = context.item
   const dispatch = context.dispatch
    const handleCartItems =(item) =>{
@@ -23,9 +23,12 @@ const ItemSection = ({context}) => {
       setButtonToggle(false)
    }
     }
-    
-  return (
-    <>
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [])
+    if(item){
+      return (
+        <>
       <ItemSectionContainer>
         <ItemImageContainer>
           <Img src={ "https://furniturestore54.herokuapp.com/" + item.itemImage} />
@@ -56,7 +59,7 @@ const ItemSection = ({context}) => {
           <p style={{fontSize:"0.8rem", opacity:"0.8"}}>
             <BsClock style={{color:"green"}}/> 60 Day Low Price Guarantee
           </p>
-          <h1>${(item.price * 10).toFixed(2)}</h1>
+          <h1>${item.price?(item.price * 10).toFixed(2):""}</h1>
           <AddToCartButton onClick={()=>handleCartItems(item)}>
             <Link to={!buttonToggle? "/cart":""} style={{color:"#000"}}><FaShoppingCart/> {buttonToggle?"ADD TO CART":"PROCEED TO CART"}</Link>
           </AddToCartButton>
@@ -64,6 +67,7 @@ const ItemSection = ({context}) => {
       </ItemSectionContainer>
     </>
   );
-};
+}
+}
 
 export default ItemSection;
