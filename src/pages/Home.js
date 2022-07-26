@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createContext } from "react"
 import Hero from "../components/hero/Hero";
 import { BASE_URL } from "../API/fetchAPI";
@@ -12,7 +12,11 @@ import Loading from "../loading/Loading";
 export const ItemContext = createContext();
 const Home = () => {
   const [data] = useFetchAPI(BASE_URL);
-    if(data.length !== 0){
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  
       return(
         <ItemContext.Provider value={data}>
         <Hero />
@@ -22,11 +26,6 @@ const Home = () => {
         <NewsLetter/>
       </ItemContext.Provider> 
       )
-    }
-
-    else{
-      return  <Loading/>
-    }
 };
 
 export default Home;

@@ -3,8 +3,8 @@ import { keyframes } from "styled-components"
 
 export const LoadingContainer = styled.div`
     width: 100%;
-    height: 100%;
-    background-color: #e5e4e5;
+    height: 100vh;
+    background-color: brown;
     display: flex;
     justify-content: center;
     align-items: center;
