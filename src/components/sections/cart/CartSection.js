@@ -19,7 +19,6 @@ import {
 } from "./StyledCartsection";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { DELETE_FROM_CART } from "../../../context/CartReducer";
-import Loading from "../../../loading/Loading";
 import EmptyCart from "./emptyCart/EmptyCart";
 
 const CartSection = ({ cartItems }) => {
