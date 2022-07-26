@@ -7,7 +7,6 @@ import NowOnSale from "../components/sections/nowOnSale/NowOnSale";
 import HomeFirst from "../components/sections/homeFirstSection/HomeFirst";
 import LimitedEdition from "../components/sections/limited_edition/LimitedEdition";
 import NewsLetter from "../components/sections/newsletter/NewsLetter";
-import Loading from "../loading/Loading";
 
 export const ItemContext = createContext();
 const Home = () => {

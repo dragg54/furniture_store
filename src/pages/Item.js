@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import useFetchAPI, { BASE_URL } from "../API/fetchAPI";
 import ItemSection from "../components/sections/item/ItemSection";
-import  {ItemSectionContainer} from "../components/sections/item/StyledItemSection"
 import { useSearchParams } from "react-router-dom";
 import  GlobalProvider, { CartContext } from "../context/GlobalContext";
 import Loading from "../loading/Loading";
