@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import useFetchAPI, { BASE_URL } from "../API/fetchAPI";
 import ItemSection from "../components/sections/item/ItemSection";
+import  {ItemSectionContainer} from "../components/sections/item/StyledItemSection"
 import { useSearchParams } from "react-router-dom";
 import  GlobalProvider, { CartContext } from "../context/GlobalContext";
 import Loading from "../loading/Loading";
@@ -12,7 +13,8 @@ const Item = () => {
   const id = searchParams.get("id");
   const [item] = useFetchAPI(`${BASE_URL}?id=${id}`);
 
-  if(item.length !== 0){
+  if(typeof item === "object"){
+    console.log(typeof item)
   return (
     <>
       <GlobalProvider>
@@ -22,9 +24,9 @@ const Item = () => {
   )
   }
   else{
-    return(
-      <Loading/>
-    )
+    <div style={{height: "100vh"}}>
+        <Loading />
+    </div>
   }
      
 };
