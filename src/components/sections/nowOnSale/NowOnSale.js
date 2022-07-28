@@ -39,7 +39,7 @@ const NowOnSale = () => {
               alignItems: "center",
             }}
           >
-            <span style={{ whiteSpace: "nowrap" }}>View all products</span>
+              <Link to="/items" style={{color:"inherit"}}><span style={{ whiteSpace: "nowrap" }}>View all products</span></Link>
             <UniqueButton>
               <ButtonStroke />
             </UniqueButton>
