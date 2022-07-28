@@ -11,7 +11,7 @@ import NewsLetter from "../components/sections/newsletter/NewsLetter";
 export const ItemContext = createContext();
 const Home = () => {
   const [data] = useFetchAPI(BASE_URL);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
