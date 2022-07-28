@@ -7,7 +7,7 @@ const Layout = ({children}) => {
   const context = useContext(CartContext)
   const item = context.state
   return (
-    <div style={{height:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
+    <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
       <Header item={item}/>
        {children}
        <Footer/>   
