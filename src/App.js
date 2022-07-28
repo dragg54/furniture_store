@@ -4,12 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Item from "./pages/Item";
 import Cart from "./pages/Cart";
 import useFetchAPI, { BASE_URL } from "./API/fetchAPI";
-import Loading from "./loading/Loading";
 import Items from "./pages/Items";
 
 function App() {
-
-  const [data] = useFetchAPI(BASE_URL);
     return (
       <Router>
           <Layout>
