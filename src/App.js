@@ -5,11 +5,11 @@ import Item from "./pages/Item";
 import Cart from "./pages/Cart";
 import useFetchAPI, { BASE_URL } from "./API/fetchAPI";
 import Loading from "./loading/Loading";
+import Items from "./pages/Items";
 
 function App() {
 
   const [data] = useFetchAPI(BASE_URL);
-  if(data.lenght !== 0){
     return (
       <Router>
           <Layout>
@@ -17,19 +17,11 @@ function App() {
             <Route path="/" exact element={<Home />} />
             <Route path="cart" element={<Cart />} />
             <Route path=":id" element={<Item />} />
+            <Route path='/items' element={<Items/>} />
           </Routes>
       </Layout>
         </Router>
     );
   }
-
-  else{
-    return(
-      <Loading />
-    )
-  }
-
-
-}
 
 export default App;
