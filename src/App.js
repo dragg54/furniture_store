@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Item from "./pages/Item";
 import Cart from "./pages/Cart";
-import useFetchAPI, { BASE_URL } from "./API/fetchAPI";
 import Items from "./pages/Items";
 
 function App() {
