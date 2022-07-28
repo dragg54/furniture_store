@@ -10,6 +10,7 @@ import {
   ItemsSectionContainer,
   ItemsWrapper,
 } from "./StyledItemsSection";
+import { Link } from "react-router-dom"
 
 const ItemsSection = () => {
   const [items] = useFetchAPI(BASE_URL);
@@ -69,7 +70,7 @@ if(!isLoading){
       <ItemsWrapper>
         {allItems.map((item) => {
           return (
-            <ItemsContainer key={item._id}>
+            <Link to={"items?id=" + item._id} style= {{color: "inherit"}}><ItemsContainer key={item._id}> 
               <ImageContainer>
                 <Img
                   src={
@@ -79,6 +80,7 @@ if(!isLoading){
               </ImageContainer>
               <ItemDetailsContainer></ItemDetailsContainer>
             </ItemsContainer>
+            </Link>
           );
         })}
       </ItemsWrapper>
