@@ -67,6 +67,10 @@ const CartSection = ({ cartItems }) => {
         item.quantity = item.quantity - 1;
         return setItemQuantity([...itemQuantity]);
       }
+
+      else if(item.id === id && item.quantity <=0){
+        cartItems.dispatch({ type: DELETE_FROM_CART, payload: { items: item } })
+      }
     }
   };
 
