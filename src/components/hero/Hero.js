@@ -13,7 +13,7 @@ const Hero = () => {
           <HeroSecondaryCaption>
             With the best cozy collection to make your home shine.
           </HeroSecondaryCaption>
-        <Link to="/items" style={{color:"inherit"}}><PrimaryButton>EXPLORE OUR COLLECTION</PrimaryButton></Link>
+        <Link to="/allitems" style={{color:"inherit"}}><PrimaryButton>EXPLORE OUR COLLECTION</PrimaryButton></Link>
         </HeroContentContainer>
       </HeroContainer>
     </HeroWrapper>
