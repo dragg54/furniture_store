@@ -70,8 +70,9 @@ if(!isLoading){
       <ItemsWrapper>
         {allItems.map((item) => {
           return (
-            <Link to={"items?id=" + item._id} style= {{color: "inherit"}}><ItemsContainer key={item._id}> 
+            <Link to={"?id=" + item._id} style= {{color: "inherit"}}><ItemsContainer key={item._id}> 
               <ImageContainer>
+
                 <Img
                   src={
                     "https://furniturestore54.herokuapp.com/" + item.itemImage

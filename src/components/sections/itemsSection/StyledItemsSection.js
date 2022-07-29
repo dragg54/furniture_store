@@ -18,7 +18,6 @@ export const ItemList = styled.div`
 `
 export const ItemsWrapper = styled.div`
     width: 70%;
-    height: 100%;
     display: grid;
     grid-template-columns:repeat(4,1fr); 
     grid-template-rows: repeat(8, 1fr);
