@@ -61,15 +61,15 @@ const CartSection = ({ cartItems }) => {
     }
   };
 
-  const handleDecrement = (id) => {
+  const handleDecrement = (id, cartItem) => {
     for (let item of itemQuantity) {
       if (item.id === id && item.quantity > 0) {
         item.quantity = item.quantity - 1;
         return setItemQuantity([...itemQuantity]);
       }
 
-      else if(item.id === id && item.quantity <=0){
-        cartItems.dispatch({ type: DELETE_FROM_CART, payload: { items: item } })
+      else if(item.id === id && item.quantity <= 0){
+        return cartItems.dispatch({ type: DELETE_FROM_CART, payload: { items: cartItem } })
       }
     }
   };
@@ -134,7 +134,7 @@ const CartSection = ({ cartItems }) => {
                         <td>
                           <QuantityControlButton>
                             <FiMinus
-                              onClick={() => handleDecrement(cartItem._id)}
+                              onClick={() => handleDecrement(cartItem._id, cartItem)}
                             />
 
                             {item.quantity}
