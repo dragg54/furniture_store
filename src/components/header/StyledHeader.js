@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import NowOnSale from "../nowOnSale/NowOnSale";
 
 export const NavContainer = styled.div`
   height: 100px;
@@ -31,47 +32,38 @@ export const NavList = styled.ul`
 export const Logo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 100%
+  height: 100%;
+  margin-top: -50px;
+  margin-left: -35px
 `;
 
 export const CompanyName = styled.h6`
   font-size: 0.6rem;
-  margin-top: -30px;
-  font-family: Indie Flower;
-  color:  #ffc304;
+  margin-top: -70px;
+  font-family: "Cairo", sans-serif;
+  color: #ffc304; 
 `;
 
 export const Img = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
 `;
 
 export const SearchAndCartContainer = styled.div`
-  width: 150px;
+  width: 100px;
   display: flex;
   justify-content: space-around;
   color: #fff;
   opacity: 0.7;
-  font-size: 1.5rem;
 
   @media (max-width: 600px) {
-    width: 100px;
+    width: 70px;
   }
-`;
-
-export const CartItemQuantity = styled.p`
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  background-color: #ffc304;
-  border-radius: 50%;
-  position: absolute;
-  font-size: 0.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -30%;
-  right: -50%
+`
+export const Menu = styled.div`
+  @media (min-width: 780px){
+    display: none
+  }
 `

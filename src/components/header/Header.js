@@ -1,25 +1,26 @@
-import React from "react";
-import {
-  CartItemQuantity,
-  CompanyName,
-  Img,
-  Logo,
-  NavContainer,
-  NavList,
-  SearchAndCartContainer,
-} from "./StyledHeader";
-import { FiSearch, FiShoppingCart, FiHeart } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { CompanyName, Img, Logo, Menu, NavContainer, NavList, SearchAndCartContainer } from './StyledHeader'
+import { FiSearch, FiShoppingCart, FiHeart, FiMenu } from "react-icons/fi"
 
-const Header = ({item}) => {
+const Header = () => {
   return (
     <NavContainer>
-      <Link to="/">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "30px",
+        }}
+      >
+        <Menu>
+          <FiMenu style={{ opacity: "0.8", height: "20px", width: "24px" }} />
+        </Menu>
         <Logo>
           <Img src="../../../images/logo.png" />
           <CompanyName>PLANKERS</CompanyName>
         </Logo>
-      </Link>
+      </div>
       <NavList>
         <li>ABOUT US</li>
         <li>CATALOG</li>
@@ -27,18 +28,10 @@ const Header = ({item}) => {
       </NavList>
       <SearchAndCartContainer>
         <FiSearch />
-        <FiHeart />
-        <Link to="/cart" style={{color: "inherit"}}>
-          <li style={{position:"relative"}}>
-            <FiShoppingCart />
-            <CartItemQuantity>
-              {item.length}
-            </CartItemQuantity>
-          </li>
-        </Link>
+        <FiShoppingCart />
       </SearchAndCartContainer>
     </NavContainer>
   );
-};
+}
 
-export default Header;
+export default Header
