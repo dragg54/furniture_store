@@ -1,6 +1,6 @@
 import React from 'react'
 import { CompanyName, Img, Logo, Menu, NavContainer, NavList, SearchAndCartContainer } from './StyledHeader'
-import { FiSearch, FiShoppingCart, FiHeart, FiMenu } from "react-icons/fi"
+import { FiSearch, FiShoppingCart, FiMenu } from "react-icons/fi"
 
 const Header = () => {
   return (

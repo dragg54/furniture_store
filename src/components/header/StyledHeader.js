@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import NowOnSale from "../nowOnSale/NowOnSale";
 
 export const NavContainer = styled.div`
   height: 100px;
