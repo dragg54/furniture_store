@@ -17,14 +17,14 @@ const Header = ({item}) => {
     <NavContainer>
       <div
         style={{
-          marginLeft: "35px",
+          marginLeft: "12px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
         <Menu>
-          <FiMenu />
+          <FiMenu style={{width:"40px", height:"30px", opacity:"0.8"}}/>
         </Menu>
         <Link to="/">
           <Logo>
