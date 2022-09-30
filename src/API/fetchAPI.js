@@ -15,7 +15,7 @@ const useFetchAPI = (BASE_URL) => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [BASE_URL]);
   return [data]
 };
 
