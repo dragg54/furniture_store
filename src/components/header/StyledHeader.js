@@ -34,15 +34,15 @@ export const Logo = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  margin-left: -20px;
-  margin-top: -35px;
+  margin-left: -30px;
+  margin-top: -51px;
 `;
 
 export const CompanyName = styled.h6`
   font-size: 0.6rem;
-  font-family: 'Cairo', sans-serif;
-  color:  #ffc304;
-  margin-top:-50px
+  font-family: "Cairo", sans-serif;
+  color: #ffc304;
+  margin-top: -50px;
 `;
 
 export const Img = styled.img`
@@ -75,11 +75,10 @@ export const CartItemQuantity = styled.p`
   justify-content: center;
   align-items: center;
   top: -30%;
-  right: -50%
-`
+  right: -50%;
+`;
 export const Menu = styled.div`
-  @media(min-width: 780px){
+  @media (min-width: 780px) {
     display: none;
-    font-size: 1.4rem
   }
-`
+`;
