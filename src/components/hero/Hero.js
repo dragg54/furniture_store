@@ -1,6 +1,5 @@
 import React from "react";
 import { HeroContainer, HeroContentContainer, HeroPrimaryCaption, HeroSecondaryCaption, HeroWrapper, PrimaryButton } from "./StyledHero";
-import { Link } from "react-router-dom"
 
 const Hero = () => {
   return (
@@ -13,7 +12,7 @@ const Hero = () => {
           <HeroSecondaryCaption>
             With the best cozy collection to make your home shine.
           </HeroSecondaryCaption>
-        <Link to="/allitems" style={{color:"inherit"}}><PrimaryButton>EXPLORE OUR COLLECTION</PrimaryButton></Link>
+        <PrimaryButton>EXPLORE OUR COLLECTION</PrimaryButton>
         </HeroContentContainer>
       </HeroContainer>
     </HeroWrapper>

@@ -24,16 +24,14 @@ export const HeroContainer = styled.div`
   }
 
   @media (max-width: 900px) {
-    width: 85%;
-    height: 500px;
-    justify-content: flex-start;
-    background-position-x: 160px;
-    background-position-y: top;
+    width: 100%;
   }
 
-  @media(max-width: 780px){
-    width: 100%;
+  @media (max-width: 600px) {
+    height: 500px;
+    justify-content: flex-start;
     background-position-x: 130px;
+    background-position-y: top;
   }
 `;
 export const HeroContentContainer = styled.div`
@@ -52,7 +50,6 @@ export const HeroContentContainer = styled.div`
 
   @media (max-width: 900px) {
     width: 45%;
-    padding: 0 20px;
   }
 
   @media (max-width: 600px) {
@@ -81,7 +78,7 @@ export const HeroSecondaryCaption = styled.p`
   margin-top: 10px;
 
   @media(max-width: 900px){
-        width: 65%;
+        width: 70%;
     }
 
   @media (max-width: 600px) {
