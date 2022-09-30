@@ -24,7 +24,7 @@ const Header = ({item}) => {
         }}
       >
         <Menu>
-          <FiMenu style={{width:"40px", height:"30px", opacity:"0.8"}}/>
+          <FiMenu style={{width:"40px", height:"27px", opacity:"0.8"}}/>
         </Menu>
         <Link to="/">
           <Logo>

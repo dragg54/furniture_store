@@ -34,7 +34,7 @@ export const Logo = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  margin-left: -30px;
+  margin-left: -25px;
   margin-top: -51px;
 `;
 
