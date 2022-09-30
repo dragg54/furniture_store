@@ -1,5 +1,7 @@
-import Layout from './components/Layout';
-import Home from './pages/Home/Home';
+import Layout from '../components/Layout';
+import Home from './Home'
+
+
 
 function App() {
   return (
