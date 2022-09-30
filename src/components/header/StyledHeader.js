@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const NavContainer = styled.div`
   height: 100px;
   width: 100%;
@@ -35,20 +34,20 @@ export const Logo = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  margin-top: -50px;
-  margin-left: -35px
+  margin-left: -20px;
+  margin-top: -35px;
 `;
 
 export const CompanyName = styled.h6`
   font-size: 0.6rem;
-  margin-top: -70px;
-  font-family: "Cairo", sans-serif;
-  color: #ffc304; 
+  font-family: 'Cairo', sans-serif;
+  color:  #ffc304;
+  margin-top:-50px
 `;
 
 export const Img = styled.img`
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
 `;
 
 export const SearchAndCartContainer = styled.div`
@@ -57,13 +56,30 @@ export const SearchAndCartContainer = styled.div`
   justify-content: space-around;
   color: #fff;
   opacity: 0.7;
+  font-size: 1.3rem;
 
   @media (max-width: 600px) {
     width: 70px;
   }
+`;
+
+export const CartItemQuantity = styled.p`
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background-color: #ffc304;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30%;
+  right: -50%
 `
 export const Menu = styled.div`
-  @media (min-width: 780px){
-    display: none
+  @media(min-width: 780px){
+    display: none;
+    font-size: 1.4rem
   }
 `
