@@ -31,33 +31,35 @@ export const NavList = styled.ul`
 export const Logo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 100%
+  height: 100%;
+  margin-left: -20px;
+  margin-top: -35px;
 `;
 
 export const CompanyName = styled.h6`
   font-size: 0.6rem;
-  margin-top: -30px;
-  font-family: Indie Flower;
+  font-family: 'Cairo', sans-serif;
   color:  #ffc304;
+  margin-top:-50px
 `;
 
 export const Img = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
 `;
 
 export const SearchAndCartContainer = styled.div`
-  width: 150px;
+  width: 100px;
   display: flex;
   justify-content: space-around;
   color: #fff;
   opacity: 0.7;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 
   @media (max-width: 600px) {
-    width: 100px;
+    width: 70px;
   }
 `;
 
@@ -74,4 +76,10 @@ export const CartItemQuantity = styled.p`
   align-items: center;
   top: -30%;
   right: -50%
+`
+export const Menu = styled.div`
+  @media(min-width: 780px){
+    display: none;
+    font-size: 1.4rem
+  }
 `
